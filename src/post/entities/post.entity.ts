@@ -1,23 +1,18 @@
-import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
-import mongoose, { Document } from "mongoose";
-import { User } from "src/user/entities/user.entity";
+import mongoose, { Document } from 'mongoose';
+import { User } from 'src/user/entities/user.entity';
 
 @Schema()
 export class Post extends Document {
-    @Prop()
-    content: string;
+  @Prop()
+  content: string;
 
-    @Prop()
+  @Prop()
+  text: string;
 
-    text:string;
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: User.name })
+  user: mongoose.Schema.Types.ObjectId;
+}
 
-    @Prop({ type: mongoose.Schema.Types.ObjectId, ref: User.name })
-    user: mongoose.Schema.Types.ObjectId;
-  }
-
-
-    
-
- 
-export const PostSchema = SchemaFactory.createForClass(Post)
+export const PostSchema = SchemaFactory.createForClass(Post);
