@@ -45,5 +45,11 @@ export class AuthService {
 
     return { access_token };
   }
+
+  getCurrentUser(email: string) {
+    return this.userService.findByEmail(email);
+  }
 }
+  
+
 
