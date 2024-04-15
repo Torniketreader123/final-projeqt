@@ -9,7 +9,7 @@ import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://veshapidzetornike:CjBchDuKT17uSf3W@cluster0.isn2wcl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+      'mongodb+srv://nikatefnadze3:wYfeErSaSgBHssAU@cluster0.wz4dscb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 ),
     UserModule,
     PostModule,
