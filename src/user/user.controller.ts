@@ -11,7 +11,7 @@ import {
 import { UserService } from './user.service';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { AuthGuard } from 'src/auth/auth.guard';
-import { ApiParam, ApiTags } from '@nestjs/swagger';
+import {  ApiTags } from '@nestjs/swagger';
 
 @ApiTags('user')
 @Controller('user')
